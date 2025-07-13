@@ -1,0 +1,11 @@
+LOAD R0 I0      # Carrega a idade (de I0) no registrador R0
+MOVE R1 R0      # Faz uma cópia da idade em R1 (backup)
+LOAD R2 I18     # Carrega o valor 18 (de I18) em R2
+SUB R0 R0 R2    # Subtrai: R0 = idade (R0) - 18 (R2)
+BNEG 8          # Se o resultado for negativo (idade < 18), pula para linha 8
+LOAD R3 I19     # (Se >=18) Carrega 1 em R3
+STORE I1 R3     # Armazena 1 em I1 (maior de idade)
+BRANCH 10       # Pula para o HALT (linha 10)
+SUB R3 R3 R3    # (Se <18) Zera R3
+STORE I1 R3     # Armazena 0 em I1 (menor de idade)
+HALT            # Termina a execução
