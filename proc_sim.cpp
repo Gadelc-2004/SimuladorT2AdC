@@ -1,4 +1,5 @@
 //Nomes: André Campos Silva Junior e Gabriel Almeida Della Croce
+//Site do github com a documentação: https://github.com/Gadelc-2004/SimuladorT2AdC
 #include <iostream>
 #include <fstream>
 #include <sstream>
